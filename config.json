@@ -10,9 +10,9 @@
     "builder": {
       "name": "Builder Agent",
       "path": "/Users/brighamhall/Projects/template-genie",
-      "command": "npm run generate",
+      "command": "npm run build",
       "capabilities": ["code", "templates", "generation", "scaffolding", "build"],
-      "description": "Generates code and templates"
+      "description": "Builds and generates code templates (web app)"
     },
     "marketer": {
       "name": "Marketer Agent",

@@ -1,0 +1,42 @@
+{
+  "agents": {
+    "scout": {
+      "name": "Scout Agent",
+      "path": "/Users/brighamhall/Projects/scout-agent",
+      "command": "npm run scan",
+      "capabilities": ["opportunities", "jobs", "grants", "gigs", "leads", "research"],
+      "description": "Finds opportunities, jobs, grants, and leads"
+    },
+    "builder": {
+      "name": "Builder Agent",
+      "path": "/Users/brighamhall/Projects/template-genie",
+      "command": "npm run generate",
+      "capabilities": ["code", "templates", "generation", "scaffolding", "build"],
+      "description": "Generates code and templates"
+    },
+    "marketer": {
+      "name": "Marketer Agent",
+      "path": "/Users/brighamhall/Projects/marketer-agent",
+      "command": "npm run generate",
+      "capabilities": ["content", "copy", "marketing", "social", "email", "ads"],
+      "description": "Creates marketing content and copy"
+    },
+    "analyst": {
+      "name": "Analyst Agent",
+      "path": "/Users/brighamhall/Projects/analyst-agent",
+      "command": "npm run analyze",
+      "capabilities": ["portfolio", "finance", "analysis", "metrics", "mNAV", "drift"],
+      "description": "Analyzes portfolio and financial metrics"
+    }
+  },
+  "queue": {
+    "maxConcurrent": 1,
+    "retryAttempts": 3,
+    "timeoutMs": 300000
+  },
+  "notifications": {
+    "webhook": null,
+    "onComplete": true,
+    "onFailure": true
+  }
+}

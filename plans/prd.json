@@ -1,0 +1,62 @@
+[
+  {
+    "story": "Create agent registry with paths and capabilities",
+    "priority": 1,
+    "passes": true,
+    "verification": "config.json defines all agents (Scout, Builder, Marketer, Analyst) with paths and skills"
+  },
+  {
+    "story": "Build task queue with priority ordering",
+    "priority": 2,
+    "passes": true,
+    "verification": "npm run queue shows pending tasks sorted by priority"
+  },
+  {
+    "story": "Implement task router that matches tasks to agent capabilities",
+    "priority": 3,
+    "passes": true,
+    "verification": "npm run dispatch <task> routes to correct agent based on keywords"
+  },
+  {
+    "story": "Add agent health check and status reporting",
+    "priority": 4,
+    "passes": true,
+    "verification": "npm run status shows each agent's availability and last run"
+  },
+  {
+    "story": "Create task execution wrapper that invokes agents",
+    "priority": 5,
+    "passes": true,
+    "verification": "npm run run executes next queued task on appropriate agent"
+  },
+  {
+    "story": "Build result collector and task completion tracking",
+    "priority": 6,
+    "passes": false,
+    "verification": "Completed tasks logged to data/completed.json with results"
+  },
+  {
+    "story": "Implement dependency resolution for multi-step workflows",
+    "priority": 7,
+    "passes": false,
+    "verification": "Tasks with depends_on wait for dependencies to complete"
+  },
+  {
+    "story": "Add webhook notifications for task completion",
+    "priority": 8,
+    "passes": false,
+    "verification": "Optional webhook called when tasks complete or fail"
+  },
+  {
+    "story": "Create daemon mode with continuous task processing",
+    "priority": 9,
+    "passes": false,
+    "verification": "npm run daemon polls queue and executes tasks automatically"
+  },
+  {
+    "story": "Build CLI dashboard showing queue and agent status",
+    "priority": 10,
+    "passes": false,
+    "verification": "npm start shows formatted dashboard with all metrics"
+  }
+]

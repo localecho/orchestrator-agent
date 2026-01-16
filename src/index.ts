@@ -2,7 +2,9 @@ import { Command } from "commander";
 import chalk from "chalk";
 import { Orchestrator } from "./orchestrator.js";
 import { agentRegistry } from "./agents/registry.js";
+import { addFeature, toggleFeature, updateFeatureStatus, listFeatures, printFeatures, seedDefaultFeatures } from "./features.js";
 import type { AgentType, TaskStatus, TaskPriority } from "./types/task.js";
+import type { Feature } from "./types/feature.js";
 
 const program = new Command();
 const orch = new Orchestrator();
@@ -93,6 +95,71 @@ program
       console.log(chalk.gray("    Capabilities: " + agent.capabilities.slice(0, 3).join(", ")));
       console.log();
     }
+  });
+
+// Feature Backlog Commands
+program
+  .command("features")
+  .description("List feature backlog")
+  .option("-e, --enabled", "Show only enabled features")
+  .option("-d, --disabled", "Show only disabled features")
+  .option("-c, --category <cat>", "Filter by category")
+  .action((options) => {
+    printFeatures({
+      enabled: options.enabled ? true : options.disabled ? false : undefined,
+      category: options.category
+    });
+  });
+
+program
+  .command("feature-add <name>")
+  .description("Add a new feature to backlog")
+  .option("-d, --description <desc>", "Feature description")
+  .option("-c, --category <cat>", "Category", "general")
+  .option("-p, --priority <num>", "Priority number")
+  .option("--disabled", "Add as disabled")
+  .action((name, options) => {
+    const feature = addFeature({
+      name,
+      description: options.description,
+      category: options.category,
+      priority: options.priority ? parseInt(options.priority) : undefined,
+      enabled: !options.disabled
+    });
+    console.log(chalk.green("\n✓ Added feature: ") + feature.name);
+    console.log(chalk.gray("  ID: " + feature.id + " | Category: " + feature.category));
+  });
+
+program
+  .command("feature-toggle <id>")
+  .description("Toggle a feature on/off")
+  .action((id) => {
+    const feature = toggleFeature(id);
+    if (feature) {
+      const status = feature.enabled ? chalk.green("ON") : chalk.gray("OFF");
+      console.log(chalk.blue("\n⚡ Toggled: ") + feature.name + " → " + status);
+    } else {
+      console.log(chalk.red("\n✗ Feature not found: ") + id);
+    }
+  });
+
+program
+  .command("feature-status <id> <status>")
+  .description("Update feature status (backlog, planned, in_progress, completed, cancelled)")
+  .action((id, status) => {
+    const feature = updateFeatureStatus(id, status as Feature["status"]);
+    if (feature) {
+      console.log(chalk.green("\n✓ Updated: ") + feature.name + " → " + status);
+    } else {
+      console.log(chalk.red("\n✗ Feature not found: ") + id);
+    }
+  });
+
+program
+  .command("features-seed")
+  .description("Seed the 31 default features")
+  .action(() => {
+    seedDefaultFeatures();
   });
 
 program.parse();

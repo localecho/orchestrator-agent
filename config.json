@@ -27,6 +27,13 @@
       "command": "npm run analyze",
       "capabilities": ["portfolio", "finance", "analysis", "metrics", "mNAV", "drift"],
       "description": "Analyzes portfolio and financial metrics"
+    },
+    "archivist": {
+      "name": "Archivist Agent",
+      "path": "/Users/brighamhall/Projects/archivist-agent",
+      "command": "npm run index",
+      "capabilities": ["knowledge", "docs", "documentation", "search", "index", "archive", "memory", "notes"],
+      "description": "Indexes documents, searches knowledge base, maintains project memory"
     }
   },
   "queue": {

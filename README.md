@@ -1,106 +1,223 @@
-# Orchestrator Agent
+# 6-Agent Team
 
-The meta-agent that routes tasks to the right agent and maintains a prioritized backlog.
+A coordinated system of autonomous agents for opportunity detection, code generation, marketing, financial analysis, task orchestration, and knowledge management.
 
-## Part of the 6-Agent Team
+## Architecture
 
-| Agent | Purpose |
-|-------|---------|
-| **Scout** | Research & Opportunity Detection |
-| **Builder** | Code Generation & Deployment |
-| **Marketer** | GTM & Distribution |
-| **Analyst** | Portfolio & Financial Monitoring |
-| **Archivist** | Knowledge & Context Management |
-| **Orchestrator** | Task Routing & Prioritization (this one) |
+```
+                    ┌─────────────────────┐
+                    │    Orchestrator     │
+                    │   (Task Router)     │
+                    └──────────┬──────────┘
+                               │
+       ┌───────────┬───────────┼───────────┬───────────┐
+       │           │           │           │           │
+       ▼           ▼           ▼           ▼           ▼
+   ┌───────┐   ┌───────┐   ┌───────┐   ┌───────┐   ┌──────────┐
+   │ Scout │   │Builder│   │Marketer│  │Analyst│   │Archivist │
+   └───────┘   └───────┘   └───────┘   └───────┘   └──────────┘
+```
+
+## Agents
+
+| Agent | Purpose | Repo | Command |
+|-------|---------|------|---------|
+| **Scout** | Opportunity detection - jobs, grants, gigs | [scout-agent](https://github.com/localecho/scout-agent) | `npm run scan` |
+| **Builder** | Code generation & templates | template-genie | `npm run build` |
+| **Marketer** | Content creation - social, email, landing pages | [marketer-agent](https://github.com/localecho/marketer-agent) | `npm run generate` |
+| **Analyst** | Portfolio monitoring - mNAV, drift, rebalancing | [analyst-agent](https://github.com/localecho/analyst-agent) | `npm run analyze` |
+| **Orchestrator** | Task routing & coordination | [orchestrator-agent](https://github.com/localecho/orchestrator-agent) | `npm run status` |
+| **Archivist** | Knowledge management & search | [archivist-agent](https://github.com/localecho/archivist-agent) | `npm run search` |
 
 ## Quick Start
 
+### 1. Check Agent Status
 ```bash
-npm install
-npm run orch add "Build user authentication"
-npm run orch list
-npm run orch next
-npm run orch complete <task-id>
+cd orchestrator-agent
+node src/index.js status
 ```
 
-## Commands
-
-### Add a task
+### 2. Route a Task
 ```bash
-npm run orch add "Task title" -d "Description" -p high -t "feature,api"
+node src/index.js dispatch "find remote AI jobs"
+# → Routes to Scout Agent (confidence: 3)
+
+node src/index.js dispatch "write linkedin post"
+# → Routes to Marketer Agent
+
+node src/index.js dispatch "check portfolio drift"
+# → Routes to Analyst Agent
+
+node src/index.js dispatch "search documentation"
+# → Routes to Archivist Agent
 ```
 
-Options:
-- `-d, --description` - Task description
-- `-p, --priority` - critical, high, medium, low
-- `-t, --tags` - Comma-separated tags
-- `-e, --estimate` - Estimated minutes
-
-### List tasks
+### 3. Add Task to Queue
 ```bash
-npm run orch list                    # All tasks
-npm run orch list -a builder         # Filter by agent
-npm run orch list -s pending         # Filter by status
+node src/index.js add "find new grant opportunities"
+node src/index.js queue  # View queue
+node src/index.js run    # Execute next task
 ```
 
-### Get next task
+## Agent Details
+
+### Scout Agent
+Scans multiple sources for opportunities:
+- HackerNews Who's Hiring
+- RemoteOK
+- WeWorkRemotely
+- Grant databases
+
 ```bash
-npm run orch next                    # Next task for any agent
-npm run orch next -a scout           # Next task for Scout
+cd scout-agent
+npm run scan        # Find opportunities
+npm run daemon      # Continuous monitoring
 ```
 
-### Complete a task
+**Capabilities:** `opportunities, jobs, grants, gigs, leads, research`
+
+### Builder Agent
+Web-based template generator (Vite app):
 ```bash
-npm run orch complete abc123 -o "Deployed to production"
+cd template-genie
+npm run dev         # Development server
+npm run build       # Production build
 ```
 
-### Block a task
+**Capabilities:** `code, templates, generation, scaffolding, build`
+
+### Marketer Agent
+AI-powered content generation:
 ```bash
-npm run orch block abc123 "Waiting for API credentials"
+cd marketer-agent
+npm run generate social --platform linkedin
+npm run generate social --platform twitter --variations 3
+npm run generate email --type cold-outreach
+npm run generate launch --type producthunt
+npm run generate landing --section full
 ```
 
-### View statistics
+**Capabilities:** `content, copy, marketing, social, email, ads`
+
+### Analyst Agent
+Portfolio monitoring with live prices:
 ```bash
-npm run orch stats
+cd analyst-agent
+npm run analyze     # Full analysis (mNAV + drift)
+npm run prices      # Current prices only
+npm run portfolio   # Portfolio breakdown
+npm run rebalance   # Rebalancing recommendations
+npm run alerts      # Active drift alerts
 ```
 
-### Test classification
+**Output includes:**
+- mNAV ratio (MSTR market cap / BTC holdings value)
+- Portfolio value with per-asset breakdown
+- Drift detection vs target allocation
+- Rebalancing alerts when thresholds exceeded
+
+**Capabilities:** `portfolio, finance, analysis, metrics, mNAV, drift`
+
+### Archivist Agent
+Knowledge base management:
 ```bash
-npm run orch classify "Find senior engineer jobs in SF"
-npm run orch classify "Deploy the new landing page"
+cd archivist-agent
+npm run index /path/to/project   # Index documents
+npm run search "query"           # Search knowledge base
+npm run stats                    # Show statistics
+npm run summary                  # Overview by category
+npm run export                   # Export to markdown
 ```
 
-### List agents
+**Capabilities:** `knowledge, docs, documentation, search, index, archive, memory, notes`
+
+## Configuration
+
+The orchestrator maintains agent registry in `config.json`:
+
+```json
+{
+  "agents": {
+    "scout": {
+      "name": "Scout Agent",
+      "path": "/path/to/scout-agent",
+      "command": "npm run scan",
+      "capabilities": ["opportunities", "jobs", "grants", "gigs"],
+      "description": "Finds opportunities, jobs, grants, and leads"
+    }
+  }
+}
+```
+
+### Task Routing
+Tasks are routed based on keyword matching against agent capabilities:
+
+| Keywords | Agent |
+|----------|-------|
+| jobs, grants, opportunities, research | Scout |
+| code, templates, build | Builder |
+| content, copy, social, email, marketing | Marketer |
+| portfolio, finance, mNAV, drift, analysis | Analyst |
+| docs, search, knowledge, archive | Archivist |
+
+## Task Queue
+
+Tasks are stored in `data/queue.json` with:
+- Priority ordering (high → medium → low)
+- Status tracking (pending, in_progress, completed, failed)
+- Result logging to `data/completed.json`
+
+## Orchestrator Commands
+
 ```bash
-npm run orch agents
+node src/index.js status    # Agent health + queue summary
+node src/index.js queue     # Display task queue
+node src/index.js agents    # List registered agents
+node src/index.js dispatch  # Route a task (dry run)
+node src/index.js add       # Add task to queue
+node src/index.js run       # Execute next pending task
 ```
 
-## How Classification Works
+## Development
 
-The Orchestrator analyzes task titles and descriptions to determine the best agent:
+### Adding a New Agent
 
-1. **Keyword matching** - Each agent has keywords (e.g., Scout: "job", "grant", "research")
-2. **Tag matching** - Explicit tags boost specific agents
-3. **Explicit mention** - Saying "Scout" or "Builder" routes directly
-4. **Confidence threshold** - Low confidence routes to Human
+1. Create agent project with CLI interface
+2. Add to orchestrator `config.json`:
+```json
+"new-agent": {
+  "name": "New Agent",
+  "path": "/path/to/new-agent",
+  "command": "npm run execute",
+  "capabilities": ["keyword1", "keyword2"],
+  "description": "What the agent does"
+}
+```
+3. Index with Archivist: `npm run index /path/to/new-agent`
 
-## Task Lifecycle
+### PRD-Driven Development
+Each agent uses `plans/prd.json` for feature tracking:
+```json
+[
+  {
+    "story": "Feature description",
+    "priority": 1,
+    "passes": false,
+    "verification": "How to verify it works"
+  }
+]
+```
+
+## End-to-End Workflow
 
 ```
-pending -> in_progress -> completed
-                      -> blocked (with reason)
+User Request → Orchestrator (routes) → Agent (executes) → Results
+     ↓              ↓                       ↓
+"find jobs"    Scout Agent           163 listings scanned
+"analyze"      Analyst Agent         Portfolio: $103K, drift alerts
+"search docs"  Archivist Agent       70 documents indexed
 ```
 
-## Data Storage
+## License
 
-Tasks stored in `data/queue.json` with full history.
-
-## Integration with Other Agents
-
-The Orchestrator coordinates but does not execute. Each agent has its own runtime:
-
-- **Scout**: `npm run scout scan` (scout-agent repo)
-- **Builder**: Claude CLI or automated pipelines
-- **Marketer**: Claude CLI with marketing prompts
-- **Analyst**: Python scripts or Claude CLI
-- **Archivist**: Documentation tools, Claude CLI
+MIT

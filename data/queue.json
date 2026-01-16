@@ -1,0 +1,79 @@
+{
+  "tasks": [
+    {
+      "id": "71d077d9",
+      "title": "Build user authentication for nibbl",
+      "description": "",
+      "agent": "builder",
+      "priority": "medium",
+      "status": "pending",
+      "tags": [],
+      "dependencies": [],
+      "createdAt": "2026-01-16T15:29:53.070Z",
+      "updatedAt": "2026-01-16T15:29:53.070Z",
+      "metadata": {
+        "classificationConfidence": 20,
+        "classificationReasoning": [
+          "Matches keyword: build"
+        ]
+      }
+    },
+    {
+      "id": "f5331b80",
+      "title": "Write launch announcement for Product Hunt",
+      "description": "Create compelling copy for PH launch",
+      "agent": "marketer",
+      "priority": "high",
+      "status": "in_progress",
+      "tags": [],
+      "dependencies": [],
+      "createdAt": "2026-01-16T15:29:59.587Z",
+      "updatedAt": "2026-01-16T15:30:18.290Z",
+      "metadata": {
+        "classificationConfidence": 80,
+        "classificationReasoning": [
+          "Matches keyword: copy",
+          "Matches keyword: launch",
+          "Matches keyword: product hunt"
+        ]
+      }
+    },
+    {
+      "id": "e639ca4e",
+      "title": "Run monthly portfolio rebalancing check",
+      "description": "",
+      "agent": "analyst",
+      "priority": "medium",
+      "status": "pending",
+      "tags": [],
+      "dependencies": [],
+      "createdAt": "2026-01-16T15:30:05.455Z",
+      "updatedAt": "2026-01-16T15:30:05.455Z",
+      "metadata": {
+        "classificationConfidence": 20,
+        "classificationReasoning": [
+          "Matches keyword: portfolio"
+        ]
+      }
+    },
+    {
+      "id": "ce736898",
+      "title": "Document the 6-agent architecture",
+      "description": "",
+      "agent": "archivist",
+      "priority": "low",
+      "status": "pending",
+      "tags": [],
+      "dependencies": [],
+      "createdAt": "2026-01-16T15:30:05.721Z",
+      "updatedAt": "2026-01-16T15:30:05.721Z",
+      "metadata": {
+        "classificationConfidence": 20,
+        "classificationReasoning": [
+          "Matches keyword: document"
+        ]
+      }
+    }
+  ],
+  "lastUpdated": "2026-01-16T15:30:18.290Z"
+}

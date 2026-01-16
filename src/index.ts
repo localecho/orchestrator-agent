@@ -97,6 +97,13 @@ program
     }
   });
 
+program
+  .command("standup")
+  .description("Generate daily standup summary")
+  .action(() => {
+    orch.standup();
+  });
+
 // Feature Backlog Commands
 program
   .command("features")

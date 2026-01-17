@@ -6,7 +6,7 @@
     "category": "scout",
     "enabled": true,
     "priority": 1,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.855Z",
     "updatedAt": "2026-01-16T19:21:28.855Z"
   },
@@ -17,7 +17,7 @@
     "category": "scout",
     "enabled": true,
     "priority": 2,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.856Z",
     "updatedAt": "2026-01-16T19:21:28.856Z"
   },
@@ -39,7 +39,7 @@
     "category": "scout",
     "enabled": true,
     "priority": 4,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
     "updatedAt": "2026-01-16T19:21:28.857Z"
   },
@@ -50,7 +50,7 @@
     "category": "scout",
     "enabled": true,
     "priority": 5,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
     "updatedAt": "2026-01-16T19:21:28.857Z"
   },
@@ -61,9 +61,9 @@
     "category": "scout",
     "enabled": true,
     "priority": 6,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
-    "updatedAt": "2026-01-16T19:21:28.857Z"
+    "updatedAt": "2026-01-16T23:34:40.569Z"
   },
   {
     "id": "d58d49",
@@ -72,7 +72,7 @@
     "category": "builder",
     "enabled": true,
     "priority": 7,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
     "updatedAt": "2026-01-16T19:21:28.857Z"
   },
@@ -83,9 +83,9 @@
     "category": "builder",
     "enabled": true,
     "priority": 8,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
-    "updatedAt": "2026-01-16T19:21:28.857Z"
+    "updatedAt": "2026-01-16T23:36:39.338Z"
   },
   {
     "id": "09b6af",
@@ -94,7 +94,7 @@
     "category": "builder",
     "enabled": true,
     "priority": 9,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
     "updatedAt": "2026-01-16T19:21:28.857Z"
   },
@@ -105,7 +105,7 @@
     "category": "builder",
     "enabled": true,
     "priority": 10,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
     "updatedAt": "2026-01-16T19:21:28.857Z"
   },
@@ -116,9 +116,9 @@
     "category": "builder",
     "enabled": true,
     "priority": 11,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.857Z",
-    "updatedAt": "2026-01-16T19:21:28.857Z"
+    "updatedAt": "2026-01-16T23:55:50.321Z"
   },
   {
     "id": "d3b041",
@@ -127,9 +127,9 @@
     "category": "marketer",
     "enabled": true,
     "priority": 12,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
-    "updatedAt": "2026-01-16T19:21:28.858Z"
+    "updatedAt": "2026-01-17T04:25:46.634Z"
   },
   {
     "id": "0b3ef7",
@@ -138,7 +138,7 @@
     "category": "marketer",
     "enabled": true,
     "priority": 13,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
     "updatedAt": "2026-01-16T19:21:28.858Z"
   },
@@ -149,9 +149,9 @@
     "category": "marketer",
     "enabled": true,
     "priority": 14,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
-    "updatedAt": "2026-01-16T19:21:28.858Z"
+    "updatedAt": "2026-01-17T04:26:04.067Z"
   },
   {
     "id": "16393f",
@@ -160,9 +160,9 @@
     "category": "marketer",
     "enabled": true,
     "priority": 15,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
-    "updatedAt": "2026-01-16T19:21:28.858Z"
+    "updatedAt": "2026-01-17T04:26:04.377Z"
   },
   {
     "id": "4bbf8f",
@@ -171,7 +171,7 @@
     "category": "marketer",
     "enabled": true,
     "priority": 16,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
     "updatedAt": "2026-01-16T19:21:28.858Z"
   },
@@ -182,9 +182,9 @@
     "category": "marketer",
     "enabled": true,
     "priority": 17,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
-    "updatedAt": "2026-01-16T19:21:28.858Z"
+    "updatedAt": "2026-01-17T04:26:04.686Z"
   },
   {
     "id": "a0a5ee",
@@ -193,7 +193,7 @@
     "category": "analyst",
     "enabled": true,
     "priority": 18,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
     "updatedAt": "2026-01-16T19:21:28.858Z"
   },
@@ -204,9 +204,9 @@
     "category": "analyst",
     "enabled": true,
     "priority": 19,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.858Z",
-    "updatedAt": "2026-01-16T19:21:28.858Z"
+    "updatedAt": "2026-01-16T23:50:22.718Z"
   },
   {
     "id": "9e26fb",
@@ -215,9 +215,9 @@
     "category": "analyst",
     "enabled": true,
     "priority": 20,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.859Z",
-    "updatedAt": "2026-01-16T19:21:28.859Z"
+    "updatedAt": "2026-01-16T23:51:22.269Z"
   },
   {
     "id": "9b1c33",
@@ -226,9 +226,9 @@
     "category": "analyst",
     "enabled": true,
     "priority": 21,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.859Z",
-    "updatedAt": "2026-01-16T19:21:28.859Z"
+    "updatedAt": "2026-01-16T23:50:23.042Z"
   },
   {
     "id": "df1bd1",
@@ -237,9 +237,9 @@
     "category": "analyst",
     "enabled": true,
     "priority": 22,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.859Z",
-    "updatedAt": "2026-01-16T19:21:28.859Z"
+    "updatedAt": "2026-01-16T23:52:29.673Z"
   },
   {
     "id": "3cd96b",
@@ -248,9 +248,9 @@
     "category": "analyst",
     "enabled": true,
     "priority": 23,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.859Z",
-    "updatedAt": "2026-01-16T19:21:28.859Z"
+    "updatedAt": "2026-01-16T23:53:36.931Z"
   },
   {
     "id": "532c5d",
@@ -259,7 +259,7 @@
     "category": "archivist",
     "enabled": true,
     "priority": 24,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.859Z",
     "updatedAt": "2026-01-16T19:21:28.859Z"
   },
@@ -270,9 +270,9 @@
     "category": "archivist",
     "enabled": true,
     "priority": 25,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.859Z",
-    "updatedAt": "2026-01-16T19:21:28.859Z"
+    "updatedAt": "2026-01-16T23:54:42.665Z"
   },
   {
     "id": "1ad270",
@@ -281,9 +281,9 @@
     "category": "archivist",
     "enabled": true,
     "priority": 26,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.860Z",
-    "updatedAt": "2026-01-16T19:21:28.860Z"
+    "updatedAt": "2026-01-17T04:27:26.273Z"
   },
   {
     "id": "5c90d2",
@@ -292,7 +292,7 @@
     "category": "archivist",
     "enabled": true,
     "priority": 27,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.860Z",
     "updatedAt": "2026-01-16T19:21:28.860Z"
   },
@@ -303,9 +303,9 @@
     "category": "orchestrator",
     "enabled": true,
     "priority": 28,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.860Z",
-    "updatedAt": "2026-01-16T19:21:28.860Z"
+    "updatedAt": "2026-01-16T23:56:56.522Z"
   },
   {
     "id": "3866c3",
@@ -314,9 +314,9 @@
     "category": "orchestrator",
     "enabled": true,
     "priority": 29,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.860Z",
-    "updatedAt": "2026-01-16T19:21:28.860Z"
+    "updatedAt": "2026-01-17T04:28:48.037Z"
   },
   {
     "id": "f2a864",
@@ -325,9 +325,9 @@
     "category": "orchestrator",
     "enabled": true,
     "priority": 30,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.860Z",
-    "updatedAt": "2026-01-16T19:21:28.860Z"
+    "updatedAt": "2026-01-17T04:30:00.109Z"
   },
   {
     "id": "0e5f2e",
@@ -336,8 +336,8 @@
     "category": "orchestrator",
     "enabled": true,
     "priority": 31,
-    "status": "backlog",
+    "status": "completed",
     "createdAt": "2026-01-16T19:21:28.860Z",
-    "updatedAt": "2026-01-16T19:21:28.860Z"
+    "updatedAt": "2026-01-16T23:29:35.815Z"
   }
 ]

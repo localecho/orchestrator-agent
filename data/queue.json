@@ -20,24 +20,6 @@
     }
   },
   {
-    "id": "e639ca4e",
-    "title": "Run monthly portfolio rebalancing check",
-    "description": "",
-    "agent": "analyst",
-    "priority": "medium",
-    "status": "pending",
-    "tags": [],
-    "dependencies": [],
-    "createdAt": "2026-01-16T15:30:05.455Z",
-    "updatedAt": "2026-01-16T15:30:05.455Z",
-    "metadata": {
-      "classificationConfidence": 20,
-      "classificationReasoning": [
-        "Matches keyword: portfolio"
-      ]
-    }
-  },
-  {
     "id": "ce736898",
     "title": "Document the 6-agent architecture",
     "description": "",
@@ -63,6 +45,16 @@
     "priority": 5,
     "status": "pending",
     "createdAt": "2026-01-16T23:27:11.049Z",
+    "attempts": 0
+  },
+  {
+    "id": "mkhirnscsr1np",
+    "description": "build templates",
+    "type": "auto",
+    "agent": "builder",
+    "priority": 5,
+    "status": "pending",
+    "createdAt": "2026-01-16T23:38:25.452Z",
     "attempts": 0
   }
 ]

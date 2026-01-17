@@ -36,7 +36,7 @@ export const agentRegistry: AgentConfig[] = [
       "Refactor code"
     ],
     available: true,
-    command: "claude"
+    command: "node src/index.js"
   },
   {
     type: "marketer",
@@ -55,7 +55,7 @@ export const agentRegistry: AgentConfig[] = [
       "Plan launches"
     ],
     available: true,
-    command: "claude"
+    command: "npx tsx src/index.ts"
   },
   {
     type: "analyst",
@@ -74,7 +74,7 @@ export const agentRegistry: AgentConfig[] = [
       "Monte Carlo simulations"
     ],
     available: true,
-    command: "claude"
+    command: "node src/index.js"
   },
   {
     type: "archivist",
@@ -93,7 +93,7 @@ export const agentRegistry: AgentConfig[] = [
       "Track learnings"
     ],
     available: true,
-    command: "claude"
+    command: "npx tsx src/index.ts"
   },
   {
     type: "human",
